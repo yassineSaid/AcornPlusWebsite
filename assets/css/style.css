@@ -180,8 +180,16 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0;
   margin: 0;
   height: 80px;
-  width: 180x;
   margin-top: -10px;
+}
+
+#header.header-scrolled #logo img{
+  background-color: white;
+  border-style: solid;
+  border-width: 7px;
+  border-color: white;
+  height: 90px;
+  border-radius: 50%;
 }
 
 @media (max-width: 768px) {
@@ -902,9 +910,15 @@ body.mobile-nav-active #mobile-nav-toggle {
 /* Facts Section
 --------------------------------*/
 #facts {
-  background: url("../img/facts-bg.jpg") center top no-repeat fixed;
+  background: white;
   background-size: cover;
   padding: 60px 0 0 0;
+  position: relative;
+}
+#facts1 {
+  background: #f1bc39;
+  background-size: cover;
+  padding: 60px 0 30px 0;
   position: relative;
 }
 
@@ -930,28 +944,40 @@ body.mobile-nav-active #mobile-nav-toggle {
   z-index: 9;
 }
 
-#facts .container {
+#facts::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.88);
+  z-index: 9;
+}
+
+#facts .container, #facts1 .container {
   position: relative;
   z-index: 10;
 }
 
-#facts .counters span {
+#facts1 .counters span {
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
   font-size: 48px;
   display: block;
-  color: #f1bc39;
+  color: white;
 }
 
-#facts .counters p {
+#facts1 .counters p {
   padding: 0;
   margin: 0 0 20px 0;
   font-family: "Montserrat", sans-serif;
-  font-size: 14px;
-  color: #111;
+  font-size: 15px;
+  color: #fff;
+  text-transform: uppercase;
 }
 
-#facts .facts-img {
+#facts1 .facts-img {
   text-align: center;
   padding-top: 30px;
 }
