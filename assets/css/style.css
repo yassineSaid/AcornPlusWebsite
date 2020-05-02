@@ -1069,7 +1069,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #portfolio .portfolio-item figure .link-preview:hover, #portfolio .portfolio-item figure .link-details:hover {
-  background: #80a93c;
+  background: #c2332d;
 }
 
 #portfolio .portfolio-item figure .link-preview:hover i, #portfolio .portfolio-item figure .link-details:hover i {
@@ -1533,7 +1533,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #footer .footer-top .social-links a:hover {
-  background: #c2332d;
+  background: #f1bc39;
   color: #fff;
 }
 
@@ -1593,7 +1593,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #footer .footer-top .footer-links ul a:hover {
-  color: #80a93c;
+  color: #f1bc39;
 }
 
 #footer .footer-top .footer-contact {
@@ -1626,7 +1626,8 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #footer .footer-top .footer-newsletter input[type="submit"]:hover {
-  background: #13a456;
+  background: #fff;
+  color: #c2332d;
 }
 
 #footer .copyright {
@@ -1673,8 +1674,8 @@ body.mobile-nav-active #mobile-nav-toggle {
   padding-top: 6px;
   padding-bottom: 6px;
 }
-#valeurs-nutritives table tr:nth-child(odd)>td:nth-child(odd) {background: #80a93c}
-#valeurs-nutritives table tr:nth-child(odd)> td:nth-child(even){background: #5f7d2c}
+#valeurs-nutritives table tr:nth-child(odd)>td:nth-child(odd) {background: #c2332d}
+#valeurs-nutritives table tr:nth-child(odd)> td:nth-child(even){background: #be5a57}
 #valeurs-nutritives table tr:nth-child(even)>td:nth-child(odd) {background: #bfbfbf}
 #valeurs-nutritives table tr:nth-child(even)> td:nth-child(even){background: #8e8e8e}
 
@@ -1701,9 +1702,10 @@ body.mobile-nav-active #mobile-nav-toggle {
   font-size: 20px;
   text-align: right;
   pointer-events: all;
+  color: #c2332d;
 }
 #glarinaDescription a:hover {
-  color: #80a93c;
+  color: #c2332d;
   opacity: 0.7;
 }
 #glarinaCommande .modal-dialog {
@@ -1717,18 +1719,18 @@ body.mobile-nav-active #mobile-nav-toggle {
   background: none;
   background-color: white;
   border: 0;
-  color: #80a93c;
+  color: #c2332d;
   font-size: 25px;
 }
 #btnCommander i {
-  color: #80a93c;
+  color: #c2332d;
   font-size: 25px;
 }
 #glarinaCommande .modal-footer {
   visibility: hidden;
 }
 #glarinaCommande .form-control {
-  border-color: #80a93c;
+  border-color: #c2332d;
 }
 #footer #logoImage {
   height: 100px;
