@@ -4,27 +4,27 @@
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
 */
-(function($) {
+(function ($) {
   "use strict";
 
   // Preloader
-  $(window).on('load', function() {
+  $(window).on('load', function () {
     if ($('#preloader').length) {
-      $('#preloader').delay(100).fadeOut('slow', function() {
+      $('#preloader').delay(100).fadeOut('slow', function () {
         $(this).remove();
       });
     }
   });
 
   // Back to top button
-  $(window).scroll(function() {
+  $(window).scroll(function () {
     if ($(this).scrollTop() > 100) {
       $('.back-to-top').fadeIn('slow');
     } else {
       $('.back-to-top').fadeOut('slow');
     }
   });
-  $('.back-to-top').click(function() {
+  $('.back-to-top').click(function () {
     $('html, body').animate({
       scrollTop: 0
     }, 1500, 'easeInOutExpo');
@@ -56,19 +56,19 @@
     $('body').append('<div id="mobile-body-overly"></div>');
     $('#mobile-nav').find('.menu-has-children').prepend('<i class="fa fa-chevron-down"></i>');
 
-    $(document).on('click', '.menu-has-children i', function(e) {
+    $(document).on('click', '.menu-has-children i', function (e) {
       $(this).next().toggleClass('menu-item-active');
       $(this).nextAll('ul').eq(0).slideToggle();
       $(this).toggleClass("fa-chevron-up fa-chevron-down");
     });
 
-    $(document).on('click', '#mobile-nav-toggle', function(e) {
+    $(document).on('click', '#mobile-nav-toggle', function (e) {
       $('body').toggleClass('mobile-nav-active');
       $('#mobile-nav-toggle i').toggleClass('fa-times fa-bars');
       $('#mobile-body-overly').toggle();
     });
 
-    $(document).click(function(e) {
+    $(document).click(function (e) {
       var container = $("#mobile-nav, #mobile-nav-toggle");
       if (!container.is(e.target) && container.has(e.target).length === 0) {
         if ($('body').hasClass('mobile-nav-active')) {
@@ -83,7 +83,7 @@
   }
 
   // Header scroll class
-  $(window).scroll(function() {
+  $(window).scroll(function () {
     if ($(this).scrollTop() > 100) {
       $('#header').addClass('header-scrolled');
     } else {
@@ -96,7 +96,7 @@
   }
 
   // Smooth scroll for the menu and links with .scrollto classes
-  $('.nav-menu a, #mobile-nav a, .scrollto, .footer-links a').on('click', function() {
+  $('.nav-menu a, #mobile-nav a, .scrollto, .footer-links a').on('click', function () {
     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
       var target = $(this.hash);
       if (target.length) {
@@ -134,10 +134,10 @@
   var main_nav = $('.nav-menu, #mobile-nav');
   var main_nav_height = $('#header').outerHeight();
 
-  $(window).on('scroll', function() {
+  $(window).on('scroll', function () {
     var cur_pos = $(this).scrollTop();
 
-    nav_sections.each(function() {
+    nav_sections.each(function () {
       var top = $(this).offset().top - main_nav_height,
         bottom = top + $(this).outerHeight();
 
@@ -151,9 +151,9 @@
   // Intro carousel
   var introCarousel = $(".carousel");
   var introCarouselIndicators = $(".carousel-indicators");
-  introCarousel.find(".carousel-inner").children(".carousel-item").each(function(index) {
+  introCarousel.find(".carousel-inner").children(".carousel-item").each(function (index) {
     (index === 0) ?
-    introCarouselIndicators.append("<li data-target='#introCarousel' data-slide-to='" + index + "' class='active'></li>"):
+      introCarouselIndicators.append("<li data-target='#introCarousel' data-slide-to='" + index + "' class='active'></li>") :
       introCarouselIndicators.append("<li data-target='#introCarousel' data-slide-to='" + index + "'></li>");
 
     $(this).css("background-image", "url('" + $(this).children('.carousel-background').children('img').attr('src') + "')");
@@ -161,7 +161,7 @@
   });
 
   $(".carousel").swipe({
-    swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
+    swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
       if (direction == 'left') $(this).carousel('next');
       if (direction == 'right') $(this).carousel('prev');
     },
@@ -169,8 +169,8 @@
   });
 
   // Skills section
-  $('#skills').waypoint(function() {
-    $('.progress .progress-bar').each(function() {
+  $('#skills').waypoint(function () {
+    $('.progress .progress-bar').each(function () {
       $(this).css("width", $(this).attr("aria-valuenow") + '%');
     });
   }, {
@@ -189,7 +189,7 @@
     layoutMode: 'fitRows'
   });
 
-  $('#portfolio-flters li').on('click', function() {
+  $('#portfolio-flters li').on('click', function () {
     $("#portfolio-flters li").removeClass('filter-active');
     $(this).addClass('filter-active');
 
@@ -199,7 +199,7 @@
   });
 
   // Initiate venobox (lightbox feature used in portofilo)
-  $(document).ready(function() {
+  $(document).ready(function () {
     $('.venobox').venobox();
   });
 
@@ -233,17 +233,26 @@
 $(function () {
 
   $('form').on('submit', function (e) {
-
     e.preventDefault();
-    $.ajax({
-      type: 'post',
-      url: 'forms/commander.php',
-      data: $('form').serialize(),
-      success: function () {
-        $('#glarinaCommande').modal('hide')
-        $('#glarinaCommandeSuccess').modal("show")
-      }
-    });
+    var valide = true;
+    $('.validate').each(function () {
+      if ($(this).text().length > 0) valide = false;
+    })
+    if (valide) {
+      $("#btnCommander").css('display', "none");
+      $(".loader").css('display', "block");
+      $.ajax({
+        type: 'post',
+        url: 'forms/commander.php',
+        data: $('form').serialize(),
+        success: function () {
+          $('#glarinaCommande').modal('hide')
+          $('#glarinaCommandeSuccess').modal("show")
+          $("#btnCommander").css('display', "block");
+          $(".loader").css('display', "none");
+        }
+      });
+    }
 
   });
 

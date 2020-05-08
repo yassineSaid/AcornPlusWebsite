@@ -163,7 +163,7 @@
           <div class="col-md-12 wow fadeInUp">
             <div class="about-col">
               <div class="img">
-                <img src="assets/img/glarina-contact.png" alt="" class="img-fluid">
+                <img src="assets/img/3b.jpg" alt="" class="img-fluid">
                 <div class="icon"><i class="fa fa-user"></i></div>
               </div>
               <h2 class="title"><a href="#">Qui somme nous</a></h2>
@@ -374,7 +374,7 @@
                     </div>
                     <div class="form-group col-md-6">
                       <input type="number" name="quantite" class="form-control" id="quantite" placeholder="Quantité en kg"
-                        data-rule="required" data-msg="Entrez la quantité que vous souhaitez commander" />
+                        data-rule="required" data-msg="Entrez la quantité que vous souhaitez commander" min="1" oninput="validity.valid||(value='');"/>
                       <div class="validate"></div>
                     </div>
                   </div>
@@ -388,8 +388,10 @@
                       data-msg="Veuillez entrer votre adresse" placeholder="Adresse de livraison"></textarea>
                     <div class="validate"></div>
                   </div>
-                  <div class="text-right"><button type="submit" id="btnCommander" name="commande">Commander
-                      <i class="fa fa-arrow-circle-right"></i></button></div>
+                  <div class="text-right">
+                    <button type="submit" id="btnCommander" name="commande">Commander<i class="fa fa-arrow-circle-right"></i></button>
+                    <div class="loader"></div>
+                  </div>
                 </form>
               </div>
             </div>
