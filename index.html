@@ -72,7 +72,7 @@
             <div class="carousel-background"><img src="assets/img/intro-carousel/1b.JPG" alt=""></div>
             <div class="carousel-container">
               <div class="carousel-content">
-                <p>Avec notre farine vous pouvez vivre une vie plus saine</p>
+                <p>Riche en protéine et en vitamine avec unindice insulinique trés faible et sans lactose</p>
                 <a href="#portfolio" class="btn-get-started scrollto">Commander</a>
               </div>
             </div>
@@ -82,7 +82,7 @@
             <div class="carousel-background"><img src="assets/img/intro-carousel/2b.JPG" alt=""></div>
             <div class="carousel-container">
               <div class="carousel-content">
-                <p>Une farine avec lequel vous pouvez préparer plusieurs recettes délicieuses et facile </p>
+                <p>Des produits sans gluten pour une vie plus saine</p>
                 <a href="#portfolio" class="btn-get-started scrollto">Commander</a>
               </div>
             </div>
@@ -92,7 +92,7 @@
             <div class="carousel-background"><img src="assets/img/intro-carousel/3b.jpg" alt=""></div>
             <div class="carousel-container">
               <div class="carousel-content">
-                <p>Farine riche en protéines et vitamines avec un Indice insulinique très bas</p>
+                <p>Des produits sans gluten pour toutes vos recettes</p>
                 <a href="#portfolio" class="btn-get-started scrollto">Commander</a>
               </div>
             </div>
@@ -102,7 +102,7 @@
             <div class="carousel-background"><img src="assets/img/intro-carousel/4b.JPG" alt=""></div>
             <div class="carousel-container">
               <div class="carousel-content">
-                <p>Farine qui correspond au budget de l'ensemble de la population </p>
+                <p>Disponible aux meilleurs prix</p>
                 <a href="#portfolio" class="btn-get-started scrollto">Commander</a>
               </div>
             </div>
@@ -163,15 +163,14 @@
           <div class="col-md-12 wow fadeInUp">
             <div class="about-col">
               <div class="img">
-                <img src="assets/img/about-team.jpg" alt="" class="img-fluid">
+                <img src="assets/img/glarina-contact.png" alt="" class="img-fluid">
                 <div class="icon"><i class="fa fa-user"></i></div>
               </div>
               <h2 class="title"><a href="#">Qui somme nous</a></h2>
               <p>
-                Acorn+ est un projet lancé par Enactus Esprit ICT en 2018 destiné aux malades coeliaques partout en
-                Tunisie .
-                son concept est de transfert les glands de chêne en farine en passant par un processus.
-                Acorn+ est l’un de projet d’ Encatus Esprit ICT qui se compose par un ensemble des jeunes motivés
+                Glarina vente des aliments diététiques pour le régime sans gluten
+                Glarina est votre nouvelle marque tunisienne de farine sans gluten à base de glands de chêne.
+                C'est la marque qui vous assure une meilleure qualité à un prix imbattable.
               </p>
             </div>
           </div>
@@ -194,17 +193,18 @@
           <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-duration="1.4s">
             <div class="icon"><i class="ion-ios-time-outline"></i></div>
             <h4 class="title"><a href="">Livraison Rapide</a></h4>
-            <p class="description">Acorn+ s'engage à vous livrer votre farine sous 24h. Commandez vite, stock limité</p>
+            <p class="description">Glarina s'engage à vous livrez la farine dans les courts délais.</p>
           </div>
           <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-duration="1.4s">
             <div class="icon"><i class="ion-ios-location-outline"></i></div>
             <h4 class="title"><a href="">Livraison sur le grand Tunis</a></h4>
-            <p class="description">vous pouvez obtenir notre farine partout sur le grand Tunis</p>
+            <p class="description">Vous pouvez obtenir notre farine partout sur le grand Tunis</p>
           </div>
           <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-duration="1.4s">
             <div class="icon"><i class="ion-ios-telephone-outline"></i></div>
             <h4 class="title"><a href="">Contact</a></h4>
-            <p class="description">Pour plus d’informations et conseils, n'hésitez pas à nous contacter</p>
+            <p class="description">Pour plus d’informations et conseils, n'hésitez pas à nous contacter
+            </p>
           </div>
 
         </div>
@@ -353,7 +353,7 @@
             </div>
             <div class="modal-body">
               <div class="form">
-                <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                <form role="form" class="php-email-form">
                   <div class="form-row">
                     <div class="form-group col-md-6">
                       <input type="text" name="nom" class="form-control" id="nom" placeholder="Nom" data-rule="required"
@@ -373,7 +373,7 @@
                       <div class="validate"></div>
                     </div>
                     <div class="form-group col-md-6">
-                      <input type="number" name="quantite" class="form-control" id="quantite" placeholder="Quantité"
+                      <input type="number" name="quantite" class="form-control" id="quantite" placeholder="Quantité en kg"
                         data-rule="required" data-msg="Entrez la quantité que vous souhaitez commander" />
                       <div class="validate"></div>
                     </div>
@@ -388,7 +388,7 @@
                       data-msg="Veuillez entrer votre adresse" placeholder="Adresse de livraison"></textarea>
                     <div class="validate"></div>
                   </div>
-                  <div class="text-right"><button type="submit" id="btnCommander">Commander
+                  <div class="text-right"><button type="submit" id="btnCommander" name="commande">Commander
                       <i class="fa fa-arrow-circle-right"></i></button></div>
                 </form>
               </div>
@@ -400,16 +400,34 @@
           </div>
         </div>
       </div>
+      <div class="modal" tabindex="-1" id="glarinaCommandeSuccess" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Merci pour votre confiance</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              Votre commande est bien passée, un agent vous contactera pour confimer la commande
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Fermer</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </section><!-- End Portfolio Section -->
 
     <!-- ======= Call To Action Section ======= -->
     <section id="call-to-action" class="wow fadeIn">
       <div class="container text-center">
-        <h3>Call To Action</h3>
-        <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        <h3>Appel à l'action</h3>
+        <p>Agissez dès maintenant et contribuer à la bonne cause pour aider les personnes dans le besoin.
         </p>
-        <a class="cta-btn" href="#">Call To Action</a>
+        <a class="cta-btn" href="#" data-toggle="modal" data-target="#glarinaCommande"
+          onclick="$('#glarinaDetails').modal('hide')">Appel à l'action</a>
       </div>
     </section><!-- End Call To Action Section -->
 
@@ -683,7 +701,7 @@
 
         <div class="section-header">
           <h3>Contactez nous</h3>
-          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
+          <p>Pour plus d'informations n'hésiter pas à nous contacter</p>
         </div>
 
         <div class="row contact-info">
@@ -691,16 +709,16 @@
           <div class="col-md-4">
             <div class="contact-address">
               <i class="ion-ios-location-outline"></i>
-              <h3>Address</h3>
-              <address>A108 Adam Street, NY 535022, USA</address>
+              <h3>Adresse</h3>
+              <address>17 cité décembre Babouche 8130 Ain Drahem Jandouba</address>
             </div>
           </div>
 
           <div class="col-md-4">
             <div class="contact-phone">
               <i class="ion-ios-telephone-outline"></i>
-              <h3>Phone Number</h3>
-              <p><a href="tel:+155895548855">+1 5589 55488 55</a></p>
+              <h3>Téléphone</h3>
+              <p><a href="tel:+21626571852">+216 99 690 734 / +216 26 571 852</a></p>
             </div>
           </div>
 
@@ -708,7 +726,7 @@
             <div class="contact-email">
               <i class="ion-ios-email-outline"></i>
               <h3>Email</h3>
-              <p><a href="mailto:info@example.com">info@example.com</a></p>
+              <p><a href="mailto:acornpluscontact@gmail.com">Acornpluscontact@gmail.com</a></p>
             </div>
           </div>
 
@@ -758,14 +776,16 @@
       <div class="container">
         <div class="row">
 
-          <div class="col-lg-3 col-md-6 footer-info">
+          <div class="col-lg-4 col-md-6 footer-info">
             <img src="assets/img/logo3.png" alt="" id="logoImage">
-            <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies
-              darta donna mare fermentum iaculis eu non diam phasellus. Scelerisque felis imperdiet proin fermentum leo.
-              Amet volutpat consequat mauris nunc congue.</p>
+            <p>
+              Glarina vente des aliments diététiques pour le régime sans gluten
+              Glarina est votre nouvelle marque tunisienne de farine sans gluten à base de glands de chêne.
+              C'est la marque qui vous assure une meilleure qualité à un prix imbattable.
+            </p>
           </div>
 
-          <div class="col-lg-3 col-md-6 footer-links">
+          <div class="col-lg-4 col-md-6 footer-links">
             <h4>Liens utiles</h4>
             <ul>
               <li><i class="ion-ios-arrow-right"></i> <a href="#intro">Accueil</a></li>
@@ -776,34 +796,32 @@
             </ul>
           </div>
 
-          <div class="col-lg-3 col-md-6 footer-contact">
+          <div class="col-lg-4 col-md-6 footer-contact">
             <h4>Contactez nous</h4>
             <p>
-              A108 Adam Street <br>
-              New York, NY 535022<br>
-              United States <br>
-              <strong>Phone:</strong> +1 5589 55488 55<br>
-              <strong>Email:</strong> info@example.com<br>
+              17 cité décembre Babouche 8130<br>
+              Ain Drahem, Jandouba<br>
+              Tunisie<br>
+              <strong>Téléphone:</strong> +216 99 690 734 / +219 26 571 852<br>
+              <strong>Email:</strong> acornpluscontact@gmail.com<br>
             </p>
 
             <div class="social-links">
-              <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-              <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-              <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
-              <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
-              <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+              <a href="https://www.facebook.com/GlarinaFarine/" class="facebook" target="_blank"><i class="fa fa-facebook"></i></a>
+              <a href="https://www.instagram.com/glarina_farina/" class="instagram" target="_blank"><i class="fa fa-instagram"></i></a>
+              <a href="https://www.linkedin.com/in/farina-glarina-679001194/" class="linkedin" target="_blank"><i class="fa fa-linkedin"></i></a>
             </div>
 
           </div>
 
-          <div class="col-lg-3 col-md-6 footer-newsletter">
+          <!-- <div class="col-lg-3 col-md-6 footer-newsletter">
             <h4>Notre Newsletter</h4>
             <p>Inscrivez-vous à la liste de diffusion Acorn+ pour recevoir des informations sur les nouveaux arrivants,
               des offres spéciales et d'autres informations sur les réductions</p>
             <form action="" method="post">
               <input type="email" name="email" placeholder="Email"><input type="submit" value="S'abonner">
             </form>
-          </div>
+          </div> -->
 
         </div>
       </div>
@@ -811,7 +829,7 @@
 
     <div class="container">
       <div class="copyright">
-        &copy; Copyright <strong>Glarina</strong>. All Rights Reserved
+        &copy; Copyright <strong>Glarina</strong>. Tous droits réservés
       </div>
       <div class="credits">
         <!--

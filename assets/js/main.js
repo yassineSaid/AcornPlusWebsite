@@ -96,7 +96,7 @@
   }
 
   // Smooth scroll for the menu and links with .scrollto classes
-  $('.nav-menu a, #mobile-nav a, .scrollto').on('click', function() {
+  $('.nav-menu a, #mobile-nav a, .scrollto, .footer-links a').on('click', function() {
     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
       var target = $(this.hash);
       if (target.length) {
@@ -216,7 +216,7 @@
         items: 4
       },
       900: {
-        items: 6
+        items: 4
       }
     }
   });
@@ -230,3 +230,21 @@
   });
 
 })(jQuery);
+$(function () {
+
+  $('form').on('submit', function (e) {
+
+    e.preventDefault();
+    $.ajax({
+      type: 'post',
+      url: 'forms/commander.php',
+      data: $('form').serialize(),
+      success: function () {
+        $('#glarinaCommande').modal('hide')
+        $('#glarinaCommandeSuccess').modal("show")
+      }
+    });
+
+  });
+
+});
