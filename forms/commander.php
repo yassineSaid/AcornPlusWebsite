@@ -9,10 +9,12 @@ if (isset($_POST['nom'])) {
     $sujet = "Nouvelle commande de ".$_POST['prenom']." ".$_POST['nom'];
     $corp = "Nom: ".$_POST['nom']."\n"."Prenom: ".$_POST['prenom']."\n"."Email: ".$_POST['email']."\n"."Téléphone: ".$_POST['telephone']."\n"."Adresse: ".$_POST['adresse']."\n"."Quantité: ".$_POST['quantite']." KG";
     $headers = "From: fw.events2019@gmail.com";
+
     if (mail($dest, $sujet, $corp, $headers)) {
-        http_response_code(201);
+        return http_response_code(201);
     } else {
-        http_response_code(500);
+        return http_response_code(500);
     }
+    return http_response_code(500);
     
 }

@@ -1819,8 +1819,20 @@ body.mobile-nav-active #mobile-nav-toggle {
   height: 500px;
 }
 
-#glarinaCommandeSuccess .modal-dialog {
+#glarinaCommandeSuccess .modal-dialog, #glarinaCommandeError .modal-dialog {
   border-radius: 30px;
+}
+
+#glarinaCommandeSuccess p {
+  font-size: 50px;
+  margin-bottom: 5px;
+  color: #4eca4a;
+}
+
+#glarinaCommandeError p {
+  font-size: 50px;
+  margin-bottom: 5px;
+  color: #c2332d;
 }
 
 #btnCommander {

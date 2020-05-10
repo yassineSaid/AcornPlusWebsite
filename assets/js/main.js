@@ -250,6 +250,12 @@ $(function () {
           $('#glarinaCommandeSuccess').modal("show")
           $("#btnCommander").css('display', "block");
           $(".loader").css('display', "none");
+        },
+        error: function () {
+          $('#glarinaCommande').modal('hide')
+          $('#glarinaCommandeError').modal("show")
+          $("#btnCommander").css('display', "block");
+          $(".loader").css('display', "none");
         }
       });
     }
