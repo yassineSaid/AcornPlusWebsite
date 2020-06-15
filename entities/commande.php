@@ -8,16 +8,18 @@ class Commande
 		private $email;
 		private $telephone;
 		private $quantite;
+		private $poids;
 		private $adresse;
 		
 
-		public function __construct($nom, $prenom, $email, $telephone, $adresse, $quantite)
+		public function __construct($nom, $prenom, $email, $telephone, $adresse, $quantite, $poids)
 		{
 			$this->nom = $nom;
 			$this->prenom = $prenom;
 			$this->email = $email;
 			$this->telephone = $telephone;
 			$this->quantite = $quantite;
+			$this->poids = $poids;
 			$this->adresse = $adresse;
 		}
 
@@ -79,6 +81,16 @@ class Commande
 		public function set_quantite($quantite)
 		{
 			$this->quantite = $quantite;
+		}
+
+		public function get_poids()
+		{
+			return $this->poids;
+		}
+
+		public function set_poids($poids)
+		{
+			$this->poids = $poids;
 		}
 
 		public function get_adresse()

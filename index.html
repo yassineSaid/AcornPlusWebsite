@@ -230,6 +230,8 @@
         </div>
 
         <div class="row portfolio-container">
+          <div class="col-lg-2 col-md-6 portfolio-item filter-farine wow fadeInUp col-vide" style="height: 0;">
+          </div>
           <div class="col-lg-4 col-md-6 portfolio-item filter-farine wow fadeInUp">
             <div class="portfolio-wrap">
               <figure>
@@ -242,7 +244,7 @@
 
               <div class="portfolio-info">
                 <h4><a href="#">Farine Glarina sans gluten</a></h4>
-                <p>18DT/KG</p>
+                <p>7.990DT/500 Grammes</p>
               </div>
             </div>
           </div>
@@ -258,23 +260,7 @@
 
               <div class="portfolio-info">
                 <h4><a href="#">Farine Glarina sans gluten</a></h4>
-                <p>18DT/KG</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 portfolio-item filter-farine wow fadeInUp">
-            <div class="portfolio-wrap">
-              <figure>
-                <img src="assets/img/portfolio/glarina.png" class="img-fluid" alt="">
-                <a href="#" data-lightbox="portfolio" data-title="Glarina" data-toggle="modal"
-                  data-target="#glarinaDetails" class="link-preview"><i class="ion ion-eye"></i></a>
-                <a href="#" class="link-details" title="Plus de détails" data-toggle="modal"
-                  data-target="#glarinaCommande"><i class="ion ion-android-cart"></i></a>
-              </figure>
-
-              <div class="portfolio-info">
-                <h4><a href="#">Farine Glarina sans gluten</a></h4>
-                <p>18DT/KG</p>
+                <p>17.990DT/1 Kilo</p>
               </div>
             </div>
           </div>
@@ -368,20 +354,32 @@
                   </div>
                   <div class="form-row">
                     <div class="form-group col-sm-12 col-xs-12 col-md-6">
+                      <select name="poids" class="form-control" id="poids" data-rule="required"
+                        data-msg="Entrez un numéro valide" />
+                        <option value="500">500 Grammes (7.990 DT)</option>
+                        <option value="1000">1 Kilo (17.990 DT)</option>
+                      </select>
+                      <div class="validate"></div>
+                    </div>
+                    <div class="form-group col-sm-12 col-xs-12 col-md-6">
+                      <input type="number" name="quantite" class="form-control" id="quantite"
+                        placeholder="Nombre de paquets" data-rule="required"
+                        data-msg="Entrez le nombre de paquets que vous souhaitez commander" min="1"
+                        oninput="validity.valid||(value='');" />
+                      <div class="validate"></div>
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group col-sm-12 col-xs-12 col-md-6">
                       <input type="number" name="telephone" class="form-control" id="telephone"
                         placeholder="Numéro de téléphone" data-rule="minlen:8" data-msg="Entrez un numéro valide" />
                       <div class="validate"></div>
                     </div>
                     <div class="form-group col-sm-12 col-xs-12 col-md-6">
-                      <input type="number" name="quantite" class="form-control" id="quantite" placeholder="Quantité en kg"
-                        data-rule="required" data-msg="Entrez la quantité que vous souhaitez commander" min="1" oninput="validity.valid||(value='');"/>
+                      <input type="email" class="form-control" name="email" id="email" placeholder="Adresse Email"
+                        data-rule="email" data-msg="Entrez une adresse email valide" />
                       <div class="validate"></div>
                     </div>
-                  </div>
-                  <div class="form-group">
-                    <input type="email" class="form-control" name="email" id="email" placeholder="Adresse Email"
-                      data-rule="email" data-msg="Entrez une adresse email valide" />
-                    <div class="validate"></div>
                   </div>
                   <div class="form-group">
                     <textarea class="form-control" name="adresse" rows="5" data-rule="required"
@@ -389,7 +387,8 @@
                     <div class="validate"></div>
                   </div>
                   <div class="text-right">
-                    <button type="submit" id="btnCommander" name="commande">Commander<i class="fa fa-arrow-circle-right"></i></button>
+                    <button type="submit" id="btnCommander" name="commande">Commander<i
+                        class="fa fa-arrow-circle-right"></i></button>
                     <div class="loader"></div>
                   </div>
                 </form>
@@ -637,7 +636,7 @@
 
           <div class="testimonial-item">
             <img src="assets/img/dorra_laouiti.jpg" class="testimonial-img" alt="">
-            <h3>Dorra Laouiti</h3>
+            <h3>Mme. Laouiti</h3>
             <p>
               <img src="assets/img/quote-sign-left.png" class="quote-sign-left" alt="">
               Cup cake délicieux et texture très fine de la farine avec un goût pas trop sucré.
@@ -647,7 +646,7 @@
 
           <div class="testimonial-item">
             <img src="assets/img/Fattoum.jpg" class="testimonial-img" alt="">
-            <h3>Fattoum</h3>
+            <h3>Epicerie Fattoum</h3>
             <p>
               <img src="assets/img/quote-sign-left.png" class="quote-sign-left" alt="">
               Goût spécial et très délicieux avec un apport nutritif très riche
@@ -657,7 +656,7 @@
 
           <div class="testimonial-item">
             <img src="assets/img/Hawa-Majri-Celiac-Safe.jpg" class="testimonial-img" alt="">
-            <h3>Hawa Mejri</h3>
+            <h3>Hawa Mejri (CEO Celiac Safe)</h3>
             <p>
               <img src="assets/img/quote-sign-left.png" class="quote-sign-left" alt="">
               Texture très fine, facile à modeler et à utiliser.
@@ -870,9 +869,12 @@
             </p>
 
             <div class="social-links">
-              <a href="https://www.facebook.com/GlarinaFarine/" class="facebook" target="_blank"><i class="fa fa-facebook"></i></a>
-              <a href="https://www.instagram.com/glarina_farina/" class="instagram" target="_blank"><i class="fa fa-instagram"></i></a>
-              <a href="https://www.linkedin.com/in/farina-glarina-679001194/" class="linkedin" target="_blank"><i class="fa fa-linkedin"></i></a>
+              <a href="https://www.facebook.com/GlarinaFarine/" class="facebook" target="_blank"><i
+                  class="fa fa-facebook"></i></a>
+              <a href="https://www.instagram.com/glarina_farina/" class="instagram" target="_blank"><i
+                  class="fa fa-instagram"></i></a>
+              <a href="https://www.linkedin.com/in/farina-glarina-679001194/" class="linkedin" target="_blank"><i
+                  class="fa fa-linkedin"></i></a>
             </div>
 
           </div>
