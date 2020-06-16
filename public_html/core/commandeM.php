@@ -1,7 +1,7 @@
 <?php
 
 
-require '../config.php';
+require '../../config.php';
 require '../entities/commande.php';
 
 class CommandeM
