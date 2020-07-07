@@ -10,7 +10,7 @@ $mail = new PHPMailer();
 $config = parse_ini_file('../../config-mailer.ini', true);
 if (isset($_POST['nom'])) {
     $commande = new Commande($_POST['nom'], $_POST['prenom'], $_POST['email'], $_POST['telephone'], $_POST['adresse'], $_POST['quantite'], $_POST['poids']);
-    //$commandeM->ajoutCommande($commande);
+    $commandeM->ajoutCommande($commande);
 
     $sujet = "Nouvelle commande de ".$_POST['prenom']." ".$_POST['nom'];
     $corp = "Nom: ".$_POST['nom']."\n"."Prenom: ".$_POST['prenom']."\n"."Email: ".$_POST['email']."\n"."Téléphone: ".$_POST['telephone']."\n"."Adresse: ".$_POST['adresse']."\n"."Quantité: ".$_POST['quantite']." * ".$_POST['poids']." grammes";
@@ -18,7 +18,6 @@ if (isset($_POST['nom'])) {
 
     $mail->isSMTP();
     //$mail->SMTPDebug = SMTP::DEBUG_SERVER;
-    $mail->setLanguage('fr');
     $mail->Host = 'smtp.gmail.com';
     $mail->Port = 587;
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;

@@ -14,6 +14,7 @@
   font-style: normal;
   font-weight: normal;
   src: url('../fonts/lemonmilk/LemonMilk.woff') format('woff');
+  font-display: swap;
 }
 
 /* roboto-regular - latin */
@@ -29,6 +30,7 @@
   url('../fonts/roboto/roboto-v20-latin-regular.woff') format('woff'), /* Modern Browsers */
   url('../fonts/roboto/roboto-v20-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
   url('../fonts/roboto/roboto-v20-latin-regular.svg#Roboto') format('svg');
+  font-display: swap;
   /* Legacy iOS */
 }
 
@@ -319,7 +321,13 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 600px) {
   #intro p {
-    font-size: 40px;
+    font-size: 38px;
+  }
+}
+
+@media (max-width: 400px) {
+  #intro p {
+    font-size: 32px;
   }
 }
 
@@ -1098,12 +1106,13 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #portfolio .portfolio-item figure {
-  background: #000;
+  background: #fff;
   overflow: hidden;
   height: 240px;
   position: relative;
   border-radius: 4px 4px 0 0;
   margin: 0;
+  text-align: center;
 }
 
 #portfolio .portfolio-item figure:hover img {
@@ -1172,6 +1181,24 @@ body.mobile-nav-active #mobile-nav-toggle {
   font-weight: 700;
   margin-bottom: 18px;
   padding-bottom: 0;
+}
+
+@media (max-width: 993px) {
+  #portfolio .col-vide {
+    display: none;
+  }
+}
+
+@media (max-width: 1200px) {
+  #portfolio .portfolio-item .portfolio-info h4 {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 400px) {
+  #portfolio .portfolio-item .portfolio-info h4 {
+    font-size: 4vw;
+  }
 }
 
 #portfolio .portfolio-item .portfolio-info h4 a {

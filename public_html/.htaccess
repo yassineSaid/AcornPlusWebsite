@@ -1,0 +1,27 @@
+RewriteEngine On
+RewriteBase /
+RewriteCond %{SERVER_PORT} 80
+RewriteRule ^(.*)$ https://www.glarina.tn/$1 [R,L]
+
+ErrorDocument 404 /404.html
+ErrorDocument 500 /500.html
+
+#Disable or Enable Directory browsing
+# disable directory browsing
+#Options All -Indexes
+# enable directory browsing
+#Options All +Indexes
+
+
+#Change the Charset and Language headers
+AddDefaultCharset UTF-8
+DefaultLanguage en-GB
+
+# One year for image files
+<filesMatch ".(jpg|jpeg|png|gif|ico|JPG|woff|ttf|woff2)$">
+Header set Cache-Control "max-age=31536000, public"
+</filesMatch>
+# One month for css and js
+<filesMatch ".(css|js)$">
+Header set Cache-Control "max-age=31536000, public"
+</filesMatch>
